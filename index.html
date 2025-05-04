@@ -54,6 +54,86 @@
             </li>
           </ul>
         </address>
+
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!--is-open-->
+      <div class="mobile-menu">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close">
+            <svg class="closing-button-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-menu-nav">
+            <ul class="nav-list-menu">
+              <li class="nav-item-menu">
+                <a class="nav-link-menu" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-item-menu">
+                <a class="nav-link-menu" href="">Portfolio</a>
+              </li>
+              <li class="nav-item-menu">
+                <a class="nav-link-menu" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="address-menu">
+            <ul class="address-list-menu">
+              <li class="address-item-menu">
+                <a class="address-link-menu" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="address-item-menu">
+                <a class="address-link-menu" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="social-icons-list-menu">
+            <li class="social-icons-items">
+              <a class="social-icons-links" href="">
+                <svg class="social-icons" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-icons-items">
+              <a class="social-icons-links" href="">
+                <svg class="social-icons" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-icons-items">
+              <a class="social-icons-links" href="">
+                <svg class="social-icons" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-icons-items">
+              <a class="social-icons-links" href="">
+                <svg class="social-icons" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -141,6 +221,7 @@
           <ul class="section-team-list">
             <li class="section-team-item">
               <img
+                srcset="./images/img-3.jpg 1x, ./images/img@2x-3.jpg 2x"
                 src="./images/img-3.jpg"
                 alt="man with black hair is smiling"
                 width="264"
@@ -190,6 +271,7 @@
 
             <li class="section-team-item">
               <img
+                srcset="./images/img-2.jpg 1x, ./images/img@2x-2.jpg 2x"
                 src="./images/img-2.jpg"
                 alt="man with brown hair is smiling"
                 width="264"
@@ -239,6 +321,7 @@
 
             <li class="section-team-item">
               <img
+                srcset="./images/img-1.jpg 1x, ./images/img@2x-1.jpg 2x"
                 src="./images/img-1.jpg"
                 alt="woman with black long hair is smiling"
                 width="264"
@@ -288,6 +371,7 @@
 
             <li class="section-team-item">
               <img
+                srcset="./images/img.jpg 1x, ./images/img@2x.jpg 2x"
                 src="./images/img.jpg"
                 alt="man with beard is smiling"
                 width="264"
@@ -346,12 +430,35 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="portfolio-apps-overlay-box">
-                <img
-                  src="./images/img-55.jpg"
-                  alt="interface of the banking app"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/BankingApp-desk.jpg    1x,
+                      ./images/BankingApp-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/BankingApp-tab.jpg    1x,
+                      ./images/BankingApp-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/BankingApp-mob.jpg    1x,
+                      ./images/BankingApp-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/BankingApp-mob.jpg"
+                    alt="interface of the banking app"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-apps-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -368,12 +475,36 @@
 
             <li class="portfolio-item">
               <div class="portfolio-apps-overlay-box">
-                <img
-                  src="./images/img-44.jpg"
-                  alt="scanning of the qr-code"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Payment-desk.jpg    1x,
+                      ./images/Payment-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Payment-tab.jpg    1x,
+                      ./images/Payment-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Payment-mob.jpg    1x,
+                      ./images/Payment-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/Payment-mob.jpg"
+                    alt="interface of the banking app"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <p class="portfolio-apps-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -389,12 +520,35 @@
 
             <li class="portfolio-item">
               <div class="portfolio-apps-overlay-box">
-                <img
-                  src="./images/img-33.jpg"
-                  alt="laptop and the phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Meditation-desk.jpg    1x,
+                      ./images/Meditation-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Meditation-tab.jpg    1x,
+                      ./images/Meditation-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Meditation-mob.jpg    1x,
+                      ./images/Meditation-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/Meditation-mob.jpg"
+                    alt="interface of the banking app"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-apps-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -411,12 +565,36 @@
 
             <li class="portfolio-item">
               <div class="portfolio-apps-overlay-box">
-                <img
-                  src="./images/img-22.jpg"
-                  alt="car steering wheel"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Taxi-desk.jpg    1x,
+                      ./images/Taxi-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Taxi-tab.jpg    1x,
+                      ./images/Taxi-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Taxi-mob.jpg    1x,
+                      ./images/Taxi-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/Taxi-mob.jpg"
+                    alt="interface of the banking app"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <p class="portfolio-apps-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -432,12 +610,35 @@
 
             <li class="portfolio-item">
               <div class="portfolio-apps-overlay-box">
-                <img
-                  src="./images/img-12.jpg"
-                  alt="screen and illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Illustrations-desk.jpg    1x,
+                      ./images/Illustrations-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Illustrations-tab.jpg    1x,
+                      ./images/Illustrations-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Illustrations-mob.jpg    1x,
+                      ./images/Illustrations-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/Illustrations-mob.jpg"
+                    alt="interface of the banking app"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-apps-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -454,12 +655,35 @@
 
             <li class="portfolio-item">
               <div class="portfolio-apps-overlay-box">
-                <img
-                  src="./images/img-66.jpg"
-                  alt="the young woman in sunglasses is smiling at her phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Courses-desk.jpg    1x,
+                      ./images/Courses-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Courses-tab.jpg    1x,
+                      ./images/Courses-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Courses-mob.jpg    1x,
+                      ./images/Courses-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/Courses-mob.jpg"
+                    alt="interface of the banking app"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="portfolio-apps-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -555,7 +779,9 @@
 
     <!--modal overlay-->
 
-    <div class="modal-overlay is-open">
+    <!--is-open-->
+
+    <div class="modal-overlay">
       <div class="modal">
         <button class="closing-button" type="button">
           <svg class="closing-button-icon" width="8" height="8">
